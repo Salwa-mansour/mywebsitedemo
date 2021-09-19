@@ -1,0 +1,110 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif;
+}
+.header{
+    padding:1.3125rem  ;
+}
+.header .logo{
+   margin: 2px;
+  
+}
+
+.auther-name{
+    color: rgb(104, 74, 74);
+    margin:.5rem 1.2rem ;
+    text-transform: capitalize;
+}
+.title-detail{
+    color: rgb(110, 88, 88);
+    font-size: .9rem;
+}
+ul{
+    list-style: none;
+    left: 0;
+}
+.soial-icon{
+    color: #9f6464;
+    margin: .3125rem;
+}
+ul.contact-me{
+    display: flex;
+    align-items: flex-start;
+   
+}
+ul.navigation {
+    margin: .75rem 0;
+}
+ul.navigation li a {
+    text-decoration: none;
+    margin: .5rem;
+    display: inline-block;
+}
+ul.navigation a:hover{
+    text-decoration: underline;
+}
+/* work item  */
+.work-overly,
+.work-img{
+    width: 100%;
+     height: 250px;
+     
+}
+.img-container{
+    overflow: hidden;
+   border-radius: 4px 4px 0px 0px;
+    position: relative;
+}
+
+.work-overly{
+    position: absolute;
+}
+
+.work-img{
+    background-color: rgb(104, 74, 74);
+    transition: transform 300ms;
+    object-fit: cover;
+    object-position: 50% 50% ;
+  
+}
+.work-item:hover .work-img{
+    transform: scale(1.05); 
+ 
+}
+
+.img-container::after{
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;   
+}
+.work-item:hover .img-container::after{
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.work-list{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   
+}
+.work-item{
+    position: relative;
+    min-width: 312px;
+    width: 80%;
+    max-width: 404px;
+    cursor: pointer;
+    box-shadow: .025px .025px 10px rgb(206, 206, 206);
+    border-radius: 4px;
+    margin: .8rem 0;
+}
+.work-discription{
+    position: relative;
+    padding: 1.3175rem;
+}
