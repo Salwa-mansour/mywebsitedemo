@@ -8,10 +8,25 @@
     padding:1.3125rem  ;
 }
 .header .logo{
+    position: fixed;
+    display: inline-block;
    margin: 2px;
-  
+   min-width:16.25rem;;
+   height: 53.416px;
+   border: none;
+   outline: none;
+  background-image: url(./imgs/salwalogo1.png);
+  transition: all 400ms ease-in-out;
+  background-size: 100% 100%;
 }
-
+.nav{
+    margin-top:63.416px ;
+}
+.header .logo:hover{
+        background-image: url(./imgs/./salwalogolets2.png);
+        height: 63.416px;
+        margin-top: 0;
+}
 .auther-name{
     color: rgb(104, 74, 74);
     margin:.5rem 1.2rem ;
@@ -49,13 +64,15 @@ ul.navigation a:hover{
 .work-overly,
 .work-img{
     width: 100%;
-     height: 250px;
+     height:300px;
      
 }
 .img-container{
     overflow: hidden;
    border-radius: 4px 4px 0px 0px;
     position: relative;
+    width: 100%;
+    height:300px;
 }
 
 .work-overly{
@@ -63,15 +80,29 @@ ul.navigation a:hover{
 }
 
 .work-img{
-    background-color: rgb(104, 74, 74);
-    transition: transform 300ms;
-    object-fit: cover;
+    background-color: rgba(167, 133, 133, 0);
+    display: inline-block;
+    /* width: 90%;
+    height: 80%; */
+    padding: 1.5rem ;
+    margin: auto;
+    transition: all 400ms ease-in-out;
+    /* transition:scale 300ms ease-in-out; */
+    object-fit:contain;
     object-position: 50% 50% ;
   
 }
-.work-item:hover .work-img{
+/* .work-item:hover .work-img{
     transform: scale(1.05); 
- 
+    background-color: rgba(167, 133, 133, 0.274);
+    -webkit-filter: drop-shadow(5px 5px 5px #222222);
+    filter: drop-shadow(5px 5px 5px #222222);
+} */
+.inview-img{
+    transform: scale(1.05); 
+    background-color: rgba(167, 133, 133, 0.274);
+    -webkit-filter: drop-shadow(5px 5px 5px #222222);
+    filter: drop-shadow(5px 5px 5px #222222);
 }
 
 .img-container::after{
@@ -83,9 +114,9 @@ ul.navigation a:hover{
     width: 100%;
     height: 100%;   
 }
-.work-item:hover .img-container::after{
+/* .work-item:hover .img-container::after{
     background-color: rgba(0, 0, 0, 0.2);
-}
+} */
 
 .work-list{
     width: 100%;
