@@ -4,29 +4,77 @@
     box-sizing: border-box;
     font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif;
 }
+body{
+    position: relative;
+    background-image:
+ /* top image, transparent white */ 
+ linear-gradient(
+    rgba(255, 255, 255, 0.623), 
+    rgba(255, 255, 255, 0.623)
+  ),
+     url(./imgs/texturebackground1.jpg);
+    
+    background-repeat: no-repeat,
+    repeat;
+background-position: center,
+    center;
+}
 .header{
-    padding:1.3125rem  ;
+   
+    position: relative;
+    min-height: 18rem;
+    width: 100%;
 }
-.header .logo{
-    position: fixed;
-    display: inline-block;
-   margin: 2px;
-   min-width:16.25rem;;
-   height: 53.416px;
-   border: none;
-   outline: none;
-  background-image: url(./imgs/salwalogo1.png);
-  transition: all 400ms ease-in-out;
-  background-size: 100% 100%;
+.header .logo-container{
+    z-index: 30;
+    height: calc(5rem + 10px);
+    position: relative;
+    position: sticky;
+    top:0px ;
 }
-.nav{
-    margin-top:63.416px ;
+.header.scrolling-logo .logo-container{
+    background-color: rgb(216, 189, 189);
+    box-shadow:  .05px .05px 10px rgb(206, 206, 206);
+   
+    /* position: sticky;
+    top:0px ; */
+  
 }
-.header .logo:hover{
-        background-image: url(./imgs/./salwalogolets2.png);
-        height: 63.416px;
-        margin-top: 0;
+.header.scrolling-logo .logo-container .logo{
+    background-image: url(./imgs/logoicosal3.png);
 }
+ .header .logo{
+     /* border: 1px solid red; */
+   position: absolute;
+   bottom: 10px;
+   left:1.3125rem ;
+     display: inline-block;
+   
+    min-width:16.25rem;;
+    height:73.416px;
+   background-image: 
+   url(./imgs/salwalogolets1-1.png);
+   /* url(./imgs/salwalogolets2.png); */
+  
+     /* 100% width, auto height */
+  background-size: auto ;
+   transition: all 400ms ease-in-out;
+   background-size: 100% 100%;
+ }
+ .header .logo:hover{
+        background-image: url(./imgs/./logoicosal3.png);
+        /* height:73.416px;
+        margin-top: 0; */
+}
+
+.header .info-wrapper{
+    position: absolute;
+    top: 5rem;
+    padding:0 1.3125rem  ;
+ 
+}
+
+
 .auther-name{
     color: rgb(104, 74, 74);
     margin:.5rem 1.2rem ;
@@ -98,7 +146,7 @@ ul.navigation a:hover{
     -webkit-filter: drop-shadow(5px 5px 5px #222222);
     filter: drop-shadow(5px 5px 5px #222222);
 } */
-.inview-img{
+.work-img.inview-img{
     transform: scale(1.05); 
     background-color: rgba(167, 133, 133, 0.274);
     -webkit-filter: drop-shadow(5px 5px 5px #222222);
@@ -126,6 +174,7 @@ ul.navigation a:hover{
    
 }
 .work-item{
+    background-color: white;
     position: relative;
     min-width: 312px;
     width: 80%;
